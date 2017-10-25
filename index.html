@@ -1,255 +1,176 @@
 <!DOCTYPE html>
-<html>
-    <!-- Imports -->
-    <head>
-        <!--Import Google Icon Font-->
-        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-        <!--Import materialize.css-->
-        <link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
-            
-        <!--Let browser know website is optimized for mobile-->
-        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    </head>
-
-    <style>
-        /* Fade Effect */
-        @keyframes paddingTopLogin{
-            0% {padding-top: 0%}
-            100% {padding-top: 33%}
-        }
-        
-        @-webkit-keyframes paddingTopLogin {
-            0% {padding-top: 0%}
-            100% {padding-top: 33%}
-        }
-
-        @-webkit-keyframes fadeIn {
-            0%   { opacity: 0; }
-            100% { opacity: 1; }
-        }
-        @-moz-keyframes fadeIn {
-            0%   { opacity: 0; }
-            100% { opacity: 1; }
-        }
-        @-o-keyframes fadeIn {
-            0%   { opacity: 0; }
-            100% { opacity: 1; }
-        }
-        @keyframes fadeIn {
-            0%   { opacity: 0; }
-            100% { opacity: 1; }
-        }
-
-        /* CSS Classes */
-        .center-logo{
-            display: block;
-            animation-name: fadeIn;
-            animation-duration: 2s;
-            padding-top: 33%
-        }
-        .center-signup-button{
-            animation-name: fadeIn;
-            animation-duration: 2s;
-            padding-top: 53%;
-        }
-        .login-field{
-            padding-top: 33%;
-            animation-name: fadeIn;
-            animation-duration: 2s;
-            display: none;
-        }
-        .signup-field{
-            animation-name: fadeIn;
-            animation-duration: 2s;
-            padding-top: 10%;
-            display: none;
-        }
-    </style>
-
-    <body>
-
-        <!-- App Logo - Our App Logo since we haven't decided it yet  -->
-        
-        <div class="row center-align center-logo" id="app-logo">
-            <img src="images/app_logo_undefined.png" alt="" class="responsive-img">
-            <h5>App Name</h5>
-        </div>
-
-        <!-- Login Toggle Button - This buttons just makes the login part appear on screen  -->
-
-        <div id="toggle-login-button" class="row center-align">
-                <a onclick="toggleLogin()" class="btn waves-effect waves-light green">login</a>
-        </div>
-
-        <!-- Login Field - The actual fields for the login part  -->
-
-        <div class="container login-field" id="login-field">
-            <div class="row">
-                <div class="col s1"></div>
-                <div class="center-align input-field col s10">
-                    <input placeholder="email" id="email" type="text" class="validate">
-                    <label for="email">Email</label>
-                </div>
-                <div class="col s1"></div>
-            </div>
-            <div class="row">
-                    <div class="col s1"></div>
-                    <div  class="center-align input-field col s10">
-                        <input placeholder="password" id="password" type="text" class="validate">
-                        <label for="password">Password</label>
-                </div>
-                <div class="col s1"></div>
-            </div>
-            <div class="row center-align">
-                <a class="waves-effect waves-light btn">Login</a>
-            </div>
-        </div>
-        
-        <!-- SignUp Fields -->
-
-        <div class="container signup-field" id="signup-field">
-            <div class="row">
-                <div class="col s1"></div>
-                <div class="center-align input-field inline col s10">
-                    <input id="first-name" type="text" class="validate">
-                    <label for="first-name">First Name</label>
-                </div>
-                <div class="col s1"></div>
-            </div>
-            <div class="row">
-                    <div class="col s1"></div>
-                    <div class="center-align input-field inline col s10">
-                        <input id="last-name" type="text" class="validate">
-                        <label for="last-name">Last Name</label>
-                    </div>
-                    <div class="col s1"></div>
-            </div>
-            <div class="row">
-                <div class="col s1"></div>
-                <div class="center-align input-field inline col s10">
-                    <input id="email" type="text" class="validate">
-                    <label for="email">Email</label>
-                </div>
-                <div class="col s1"></div>
-            </div>
-            <div class="row">
-                    <div class="col s1"></div>
-                    <div  class="center-align input-field inline col s10">
-                        <input id="password" type="text" class="validate">
-                        <label for="pasword">Password</label>
-                </div>
-                <div class="col s1"></div>
-            </div>
-            <div class="row">
-                <div class="col s1"></div>
-                <div  class="center-align input-field inline col s10">
-                    <input id="age" type="text" class="validate">
-                    <label for="age">Age</label>
-                </div>
-            </div>
-            <div class="row center-align">
-                <div class="col s1"></div>
-                <div class="col s5">
-                    <input name="gender" type="radio" id="test1" />
-                    <label for="male">Male</label>
-                </div>
-                <div class="col s5">
-                    <input name="gender" type="radio" id="test2" />
-                    <label for="female">Female</label>
-                </div>
-                <div class="col s1"></div>
-            </div>
-            <div class="row">
-                <div class="col s1"></div>
-                <div  class="center-align input-field inline col s10">
-                    <input id="nationality" type="text" class="validate">
-                    <label for="nationality">Nationality</label>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col s1"></div>
-                <div  class="center-align input-field inline col s10">
-                    <input id="major" type="text" class="validate">
-                    <label for="major">Major</label>
-                </div>
-            </div>
-        </div>
-
-        <div class="row center-align center-signup-button" id="signup-button-menu">
-            <a onclick="toggleSignup()" href="#">Sign up</a>
-        </div>
-        <!--Import jQuery before materialize.js-->
-        <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
-        <script type="text/javascript" src="js/materialize.min.js"></script>
-    </body>
-
-    <script>
-        var toggleOnOffSignup = true;
-
-        var appLogo = document.getElementById("app-logo");
-        
-        var loginButton = document.getElementById("login-button");
-        var loginField = document.getElementById("login-field");
-
-        var appSignup = document.getElementById("signup-field");
-
-        var toggleLoginButton = document.getElementById("toggle-login-button");
-        var signUpButton = document.getElementById("signup-button-menu");
-        
-        function hideLogin(){
-            if(loginField.style.display !== "none"){
-                loginField.style.display = "none";
-            }
-        }
-
-        function showLogin(){
-            if (loginField.style.display !== "block"){
-                loginField.style.display = "block";
-            }
-        } 
-
-        function hideSignUp(){
-            if (appSignup.style.display !== "none") {
-                appSignup.style.display = "none";
-            }
-        }
-
-        function showSignUp(){
-            if (appSignup.style.display !== "block"){
-                appSignup.style.display = "block"; 
-            }
-        }
-
-        function hideLogo(){
-            if (appLogo.style.display !== "none") {
-                appLogo.style.display = "none";
-            }
-        }
-
-        function hideToggleLoginButton(){
-            toggleLoginButton.style.display = "none";
-        }
-        
-        function toggleLogin(){
-                hideLogo();
-                showLogin();
-                hideToggleLoginButton();
-        }
-
-        function toggleSignup(){
-            toggleLogin();
-            if(toggleOnOffSignup){
-                hideLogin();
-                showSignUp();
-                toggleOnOffSignup = false;
-                signUpButton.style.paddingTop = "5%";
-            } else{
-                hideSignUp();
-                showLogin();
-                signUpButton.style.paddingTop = "53%";
-                toggleOnOffSignup = true;
-            }
-        }
-
-    </script>
-</html>
+  <html>
+		<head>
+		  <title>Find Me a Roommate</title>
+		  
+		  <!-- Compiled and minified CSS -->
+		  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
+		  <!--Import Google Icon Font-->
+		  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+		  <!--Import materialize.css-->
+		  <link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
+		  <!--Let browser know website is optimized for mobile-->
+		  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+		  
+		</head>
+		<!--<p>Please fill out the following profile information. Once finished, please click "Submit"</p>-->
+		<body>
+			<div class="row">
+				<form class="col s12">
+				  <!--First, Middle, Last-->
+				  <div class="row">
+					<div class="input-field col s5">
+					  <input id="first_name" type="text" class="validate">
+					  <label for="first_name">First Name</label>
+					</div>
+					<div class="input-field col s2">
+					  <input id="middle_initial" type="text" class="validate">
+					  <label for="middle_initial">M.I.</label>
+					</div>
+					<div class="input-field col s5">
+					  <input id="last_name" type="text" class="validate">
+					  <label for="last_name">Last Name</label>
+					</div>
+				  </div>
+				  
+				  <!--Date of Birth, Gender-->
+				  <div class="row">
+					<div class="input-field col s6">
+					  <input type="text" class="datepicker">
+					  <label for="Date of Birth">Date of Birth</label>
+					</div>
+					<div class="input-field col s6">
+						<select>
+						  <option value="" disabled selected></option>
+						  <option value="1">Male</option>
+						  <option value="2">Female</option>
+						</select>
+						<label>Gender</label>
+					 </div>
+				  </div>
+				  
+				  <!--Classification, Transfer-->
+				  <div class="row">
+					<div class="input-field col s6">
+						<select>
+						  <option value="" disabled selected></option>
+						  <option value="1">Freshman</option>
+						  <option value="2">Sophomore</option>
+						  <option value="3">Junior</option>
+						  <option value="4">Senior</option>
+						  <option value="5">Super Senior</option>
+						</select>
+						<label>Classification</label>
+					 </div>
+					 <div class="input-field col s6">
+						<select>
+						  <option value="" disabled selected></option>
+						  <option value="1">Yes</option>
+						  <option value="2">No</option>
+						</select>
+						<label>Are you a Transfer Student?</label>
+					 </div>
+				  </div>
+				  
+				  <!--Sleeping-->
+				  <div class="row">
+					<div class="input-field col s12">
+						<select multiple>
+						  <option value="" disabled selected></option>
+						  <option value="1">Early rise</option>
+						  <option value="2">Late rise</option>
+						  <option value="3">Early bed</option>
+						  <option value="4">Late bed</option>
+						</select>
+						<label>Describe your wake/sleep habits. Choose all that apply</label>
+					 </div>
+				  </div>
+				  
+				  <!--Housekeeping-->
+				  <div class="row">
+					<div class="input-field col s12">
+						<select>
+						  <option value="" disabled selected></option>
+						  <option value="1">Neat</option>
+						  <option value="2">Moderate</option>
+						  <option value="3">Messy</option>
+						</select>
+						<label>Describe your housekeeping style</label>
+					 </div>
+				  </div>
+				  
+				  <!--Music-->
+				  <div class="row">
+					<div class="input-field col s12">
+						<select multiple>
+						  <option value="" disabled selected></option>
+						  <option value="1">Christian</option>
+						  <option value="2">Country</option>
+						  <option value="3">Classical</option>
+						  <option value="4">Rap</option>
+						  <option value="5">Rock</option>
+						  <option value="6">R&B</option>
+						  <option value="7">Alternative</option>
+						  <option value="8">Other</option>
+						</select>
+						<label>What type of music do you listen to? Choose all that apply</label>
+					 </div>
+					 
+				  <!--Studying-->
+				  <div class="row">
+					<div class="input-field col s12">
+						<select>
+						  <option value="" disabled selected></option>
+						  <option value="1">Yes</option>
+						  <option value="2">No</option>
+						</select>
+						<label>Do you listen to music or watch TV while you study?</label>
+					</div>
+					<div class="row">
+						<div class="input-field col s12">
+							<select multiple>
+							  <option value="" disabled selected></option>
+							  <option value="1">Early morning(6am-9am)</option>
+							  <option value="2">Morning(9am-12pm)</option>
+							  <option value="3">Early afternoon(12pm-2pm)</option>
+							  <option value="4">Afternoon(2pm-5pm)</option>
+							  <option value="5">Early evening(5pm-7pm)</option>
+							  <option value="6">Evening(7pm-10pm)</option>
+							  <option value="7">Late(10pm-12am)</option>
+							  <option value="8">Late late(12am-3am)</option>
+							</select>
+							<label>When do you prefer to study? Choose all that apply</label>
+					    </div>
+				    </div>
+					<!--Studying-->
+					 <div class="row">
+						<div class="input-field col s12">
+							<p class="range-field">
+							  <input type="range" id="test5" min="50" max="90" />
+							</p>
+						</div>
+				</form>
+				<button class="btn waves-effect waves-light" type="submit" name="action">Submit
+				<i class="material-icons right">send</i>
+		  <!--Import jQuery before materialize.js-->
+		  <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+		  <!-- Compiled and minified JavaScript -->
+		  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
+		  <script type="text/javascript" src="js/materialize.min.js"></script>
+		<script>
+	
+			  $('.datepicker').pickadate({
+				selectMonths: true, // Creates a dropdown to control month
+				selectYears: 100, // Creates a dropdown of 100 years to control year,
+				max: 'Today',
+				today: 'Today',
+				clear: 'Clear',
+				close: 'Ok',
+				closeOnSelect: false}); // Close upon selecting a date,
+			  
+			  $(document).ready(function() {
+				$('select').material_select(); });
+		</script>
+			  
+		</body>
+  </html>
