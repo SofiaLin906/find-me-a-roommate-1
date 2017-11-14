@@ -1,0 +1,286 @@
+<html>
+<head>
+	<title>Find Me a Roommate</title>
+
+    <!--Import Google Icon Font-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <!--Import materialize.css-->
+    <link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
+
+    <!--Let browser know website is optimized for mobile-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>    
+
+</head>
+<body>
+  <!--Import jQuery before materialize.js--> 
+  <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script> 
+     
+   <!-- Compiled and minified JavaScript --> 
+   <script type="text/javascript" src="js/materialize.min.js"></script>
+
+   <!--Side Bar Filter-->
+  <ul id="slide-out" class="side-nav">
+
+    <!--Filter Age-->    
+    <ul class="collection with-header">    
+    <li class="collection-header"><h5>Age</h5></li>
+      <li class="collection-item">
+        <form action="#">
+          <p>
+            <input class="with-gap" name="group1" type="radio" id="age>21" />
+            <label for="age>21">>21</label>
+          </p>
+          <p>
+            <input class="with-gap" name="group1" type="radio" id="age18-21" />
+            <label for="age18-21">18-21</label>
+          </p>
+          <p>
+            <input class="with-gap" name="group1" type="radio" id="age<18"  />
+            <label for="age<18"><18</label>
+          </p>
+        </form>
+      </li>
+    </ul>
+           
+
+    <!--Filter Gender-->    
+    <ul class="collection with-header">    
+    <li class="collection-header"><h5>Gender</h5></li>
+      <li class="collection-item">
+        <form action="#">
+          <p>
+            <input class="with-gap" name="group1" type="radio" id="genderM" />
+            <label for="genderM">Male</label>
+          </p>
+          <p>
+            <input class="with-gap" name="group1" type="radio" id="genderF" />
+            <label for="genderF">Female</label>
+          </p>
+        </form>
+      </li>
+    </ul>
+      
+
+    <!--Filter Year-->    
+    <ul class="collection with-header">    
+    <li class="collection-header"><h5>Year</h5></li>
+      <li class="collection-item">
+        <form action="#">
+          <p>
+            <input class="with-gap" name="group1" type="radio" id="yearF" />
+            <label for="yearF">Freshman</label>
+          </p>
+          <p>
+            <input class="with-gap" name="group1" type="radio" id="yearS" />
+            <label for="yearS">Sophomore</label>
+          </p>
+          <p>
+            <input class="with-gap" name="group1" type="radio" id="yearJ" />
+            <label for="yearJ">Junior</label>
+          </p>
+          <p>
+              <input class="with-gap" name="group1" type="radio" id="yearSe" />
+              <label for="yearSe">Senior</label>
+            </p>
+            <p>
+                <input class="with-gap" name="group1" type="radio" id="yearSS" />
+                <label for="yeayearSSrJ">Super Senior</label>
+              </p>
+        </form>
+      </li>
+    </ul>
+     
+
+    <!--Confirm Button-->
+    <a class="btn-floating btn-large waves-effect waves-light red right" style="width: 36px; height: 36px"><i class="material-icons" style="line-height: 36px">check</i></a>
+    <a class="btn-floating btn-large waves-effect waves-light red right" style="width: 36px; height: 36px"><i class="material-icons" style="line-height: 36px">close</i></a>
+    
+  </ul> 
+  
+
+  <!-- Account dropdown -->
+  <ul id="dropdown1" class="dropdown-content">
+    <li><a href="#!">My Account</a></li>
+    <li><a href="#!">Edit Profile</a></li>
+    <li class="divider"></li>
+    <li><a href="#!">Sign Out</a></li>
+  </ul>
+
+  <nav>
+    <div class="nav-wrapper">
+      <!-- Logo -->
+      <a href="#" class="brand-logo center"><i class="material-icons">home</i>Find-Me-A-Roommate</a>          
+     
+      </ul>      
+    
+    <ul class="right hide-on-med-and-down">     
+      <!-- filter list -->
+      <li><a href="#" data-activates="slide-out" class="button-collapse" title="Click to filter"><i class="material-icons">filter_list</i></a></li>          
+     
+     <!-- refresh button -->
+     <li><a href="SearchPage.html" title="Refresh"><i class="material-icons">refresh</i></a></li>
+
+     <!-- Dropdown Trigger -->
+     <li><a class="dropdown-button" href="#" data-activates="dropdown1" title="Account"><i class="material-icons">account_circle</i></a></li>
+
+    </ul>    
+    </div>
+  </nav>
+  
+     <!-- search bar-->
+     <nav>
+        
+             <div class="nav-wrapper">
+        
+             <form>
+        
+             <div class="input-field">
+        
+            <input id="search" type="search" required title="Search profiles">
+        
+            <label class="label-icon" for="search"><i class="material-icons">search</i></label>
+        
+            <i class="material-icons">close</i>
+        
+            </div>
+        
+             </form>
+        
+             </div>
+        
+           </nav>    
+        </div>
+
+
+     <!-- collection of student profiles -->
+   
+   <ul class="collection">
+     <li class="collection-item avatar">
+
+        <img src="" alt="" class="circle">
+
+        <span class="title">Name</span>
+
+        <p>Gender <br>
+
+    Age
+
+        </p>
+
+        <a href="#!" class="secondary-content"><i class=material-icons>forward</i></a>
+
+     </li>
+
+    
+
+    
+     <li class="collection-item avatar">
+
+        <img src="" alt="" class="circle">
+
+        <span class="title">Name</span>
+
+        <p>Gender <br>
+
+    Age
+
+        </p>
+
+        <a href="#!" class="secondary-content"><i class=material-icons>forward</i></a>
+
+     </li>
+    
+
+
+    
+     <li class="collection-item avatar">
+
+        <img src="" alt="" class="circle">
+
+        <span class="title">Name</span>
+
+        <p>Gender <br>
+
+    Age
+
+        </p>
+
+        <a href="#!" class="secondary-content"><i class=material-icons>forward</i></a>
+
+     </li>
+
+     
+
+     
+     <li class="collection-item avatar">
+
+        <img src="" alt="" class="circle">
+
+        <span class="title">Name</span>
+
+        <p>Gender <br>
+
+    Age
+
+        </p>
+
+        <a href="#!" class="secondary-content"><i class=material-icons>forward</i></a>
+
+     </li>
+
+    
+
+    
+     <li class="collection-item avatar">
+
+        <img src="" alt="" class="circle">
+
+        <span class="title">Name</span>
+
+        <p>Gender <br>
+
+    Age
+
+        </p>
+
+        <a href="#!" class="secondary-content"><i class=material-icons>forward</i></a>
+
+     </li>
+    
+   </ul>
+
+	<!--Script-->
+	<script type="text/javascript">
+		// Initialize collapse button    
+		$('.button-collapse').sideNav({
+			menuWidth: 250
+	    });
+
+		$(".dropdown-button").dropdown();
+	</script>
+	
+
+	<!--Style-->
+	<style type="text/css">
+		nav .nav-wrapper li .button-collapse { 
+			display: initial ;
+			width: 54px;			
+			margin-left: -3px;
+			margin-right: -3px;
+		}    
+
+		.side-nav .collection {margin: 5px 5px 5px 5px; width: 200px;} 
+
+		.side-nav .collection .collection-header {padding: 0 0 0 10px;} 
+		
+		.side-nav .collection .collection-item {padding: 0 0 0 10px;}	
+
+		.collection {margin: 15px 15px 15px 15px;}   
+
+		ul a {margin: 5px 5px 5px 5px;}
+		ul li a {margin: 0 0 0 0;}
+	</style>
+	
+</body>
+</html>                                     
